@@ -1,4 +1,6 @@
 spring:
+  profiles:
+    active: dev,lfu
   datasource:
     url: jdbc:postgresql://localhost:5432/springBootHW
     username: admin
@@ -7,7 +9,7 @@ spring:
     clevertec:
       redis:
         redis-host: localhost
-        redis-port: 63790
+        redis-port: 6379
         prefix-cache-name: spr
         ttl: 10
 clevertec:
