@@ -1,5 +1,5 @@
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/springBootHW
-    username: admin
+    username: adminn
     password: admin
