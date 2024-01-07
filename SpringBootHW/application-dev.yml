@@ -7,7 +7,7 @@ spring:
     clevertec:
       redis:
         redis-host: localhost
-        redis-port: 6379
+        redis-port: 63790
         prefix-cache-name: spr
         ttl: 10
 clevertec:
