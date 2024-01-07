@@ -3,3 +3,14 @@ spring:
     url: jdbc:postgresql://localhost:5432/springBootHW
     username: adminn
     password: admin
+  cache:
+    clevertec:
+      redis:
+        redis-host: localhost
+        redis-port: 6379
+        prefix-cache-name: spr
+        ttl: 10
+clevertec:
+  exceptions:
+    handler:
+      enable: false
