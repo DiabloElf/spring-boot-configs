@@ -9,7 +9,7 @@ spring:
         redis-host: localhost
         redis-port: 6379
         prefix-cache-name: prefix
-        ttlSecond: 2
+        ttlSecond: 15
 clevertec:
   exceptions:
     handler:
