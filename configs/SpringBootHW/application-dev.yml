@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/springBootHW
+    username: admin
+    password: admin
+  cache:
+    redis:
+      time-to-live: 7
+  data:
+    redis:
+      port: 6379
+clevertec:
+  exceptions:
+    handler:
+      enable: false
