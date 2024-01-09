@@ -4,12 +4,11 @@ spring:
     username: admin
     password: admin
   cache:
-    clevertec:
-      redis:
-        redis-host: localhost
-        redis-port: 6379
-        prefix-cache-name: prefix
-        ttlSecond: 15
+    redis:
+      time-to-live: 7
+  data:
+    redis:
+      port: 6379
 clevertec:
   exceptions:
     handler:
