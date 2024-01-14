@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/${SPRING_BOO_HW}
+    url: jdbc:postgresql://localhost:5432/${SPRING_BOOT_HW}
     username: admin
     password: admin
   cache:
