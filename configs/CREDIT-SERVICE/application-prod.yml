@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:postgresql://service-db:${PROD_DB_PORT}/${DB_NAME:clevertec-banking}?currentSchema=${DEFAULT_SCHEMA:credit}
+    url: jdbc:postgresql://localhost:${PROD_DB_PORT}/${DB_NAME:clevertec-banking}?currentSchema=${DEFAULT_SCHEMA:credit}
     username: ${PROD_DB_USERNAME:clevertec}
     password: ${PROD_DB_PASSWORD:banking}
   jpa:
