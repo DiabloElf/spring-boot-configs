@@ -1,4 +1,6 @@
 spring:
+  config:
+    import: optional:file:.env
   datasource:
     url: jdbc:postgresql://service-db:${PROD_DB_PORT}/${DB_NAME}?currentSchema=${DEFAULT_SCHEMA}
     username: ${PROD_DB_USERNAME}
