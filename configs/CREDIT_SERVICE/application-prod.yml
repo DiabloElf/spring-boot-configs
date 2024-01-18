@@ -1,36 +1,34 @@
 spring:
-  config:
-    import: optional:file:.env
   datasource:
-    url: jdbc:postgresql://service-db:${PROD_DB_PORT}/${DB_NAME}?currentSchema=${DEFAULT_SCHEMA}
-    username: ${PROD_DB_USERNAME}
-    password: ${PROD_DB_PASSWORD}
+    url: jdbc:postgresql://service-db:5432/clevertec-banking?currentSchema=credit
+    username: clevertec
+    password: banking
   jpa:
     show-sql: false
     properties:
       hibernate:
         format_sql: false
-        default_schema: ${DEFAULT_SCHEMA}
+        default_schema: credit
   liquibase:
-    default-schema: ${DEFAULT_SCHEMA}
+    default-schema: credit
     change-log: classpath:db/changelog/db.changelog-master.yaml
-    liquibase-schema: ${DEFAULT_SCHEMA}
+    liquibase-schema: credit
   rabbitmq:
     listener:
       simple:
         acknowledge-mode: auto
         prefetch: 1
-    port: ${PROD_RABBIT_PORT}
-    host: ${PROD_RABBIT_HOST}
-    username: ${RABBIT_USERNAME}
-    password: ${RABBIT_PASSWORD}
+    port: 5672
+    host: rabbitmq
+    username: clevertec
+    password: banking
 clevertec:
   rabbit:
     consumer:
       queue:
-        credit-queue: ${PROD_RABBITMQ_QUEUE_NAME}
+        credit-queue: credit-details
 eureka:
   client:
     service-url:
-      defaultZone: http://${PROD_EUREKA_HOST}:${PROD_EUREKA_PORT}/eureka/
+      defaultZone: http://eureka-server:8761/eureka/
     enabled: true
