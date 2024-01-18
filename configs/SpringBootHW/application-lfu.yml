@@ -1,5 +1,0 @@
-spring:
-  cache:
-    clevertec:
-      lfu:
-        capacity: 4
